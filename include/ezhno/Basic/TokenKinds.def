@@ -1,0 +1,36 @@
+#ifndef TOK
+# define TOK(X)
+#endif
+#ifndef KEYWORD
+# define KEYWORD(X) TOK(kw_ ## X)
+#endif
+#ifndef PUNCTUATOR
+# define PUNCTUATOR(X, Y) TOK(pt_ ## X)
+#endif
+
+TOK(eof)
+TOK(unknown)
+TOK(identifier)
+TOK(name)
+TOK(value)
+
+//KEYWORD(function)
+//KEYWORD(variable)
+KEYWORD(int32)
+KEYWORD(return)
+
+PUNCTUATOR(apostophe, ',')
+PUNCTUATOR(semicolon, ';')
+PUNCTUATOR(plus, '+')
+PUNCTUATOR(minus, '-')
+PUNCTUATOR(equal, '=')
+PUNCTUATOR(left_brace, '{')
+PUNCTUATOR(right_brace, '}')
+PUNCTUATOR(left_parameter, '(')
+PUNCTUATOR(right_parameter, ')')
+//PUNCTUATOR(colon, ':')
+//PUNCTUATOR(period, '.')
+
+#undef TOK
+#undef KEYWORD
+#undef PUNCTUATOR

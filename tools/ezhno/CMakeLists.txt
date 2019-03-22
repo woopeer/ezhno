@@ -1,0 +1,11 @@
+add_executable(ezhno
+  ezhno.cpp
+)
+llvm_config(ezhno
+  Support
+)
+target_link_libraries(ezhno
+  PRIVATE
+  EzhnoLex
+  clangBasic
+)

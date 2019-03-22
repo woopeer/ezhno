@@ -1,0 +1,18 @@
+add_executable(ego
+  ego.cpp
+)
+llvm_config(ego
+  Support
+  Option
+)
+target_link_libraries(ego
+  PRIVATE
+  clangBasic
+  clangLex
+  clangParse
+  clangAST
+  clangDriver
+  clangSerialization
+  clangFrontend
+  clangFrontendTool
+)
