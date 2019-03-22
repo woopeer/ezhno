@@ -34,7 +34,7 @@ Lexer::LexNumericConstant(Token& Result, Lexer::buffer_iterator Ptr)
   ++ Ptr;
   while (clang::isDigit(*Ptr))
     ++ Ptr;
-  FormToken(Result, token::value, Ptr);
+  FormToken(Result, token::integer, Ptr);
 }
 
 inline void

@@ -19,22 +19,19 @@ class Parser {
   Lexer& Lxr;
   Token Tok;
 public:
-  Parser(Lexer& Lxr) : Lxr(Lxr) {}
-
+  Parser(Lexer& L) : Lxr(L) {}
+ /*
   bool ParseFirstTopLevelDecl(DeclRef& Result);
   bool ParseTopLevelDecl(DeclRef& Result);
 
+  bool ParseFunctionDeclaration(DeclRef& Result);
   bool ParseFunctionDefinition(DeclRef& Result);
-  bool ParseFunctionArguments(Args& Result);
-  bool ParseFunctionBody(Body& Result);
 
-  bool ParseAssignmentStmt(Stmt& Result);
-  bool ParseExprStmt(Stmt& Result);
-  bool ParseReturn(Stmt& Result);
-
-  bool ParseAdditionExpr(Expr& Result);
-  bool ParseSubtractExpr(Expr& Result);
-}
+  bool ParseStatement(Stmt*&);
+  */
+  bool ParseAdditiveExpression(Expr*&);
+  bool ParseExpression(Expr*&);
+};
 
 }
 

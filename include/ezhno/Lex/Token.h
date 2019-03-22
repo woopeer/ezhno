@@ -20,6 +20,8 @@ public:
 
   void setKind(token::TokenKind K) { Kind = K; }
   unsigned getKind() const { return Kind; }
+  bool is(token::TokenKind K) const { return Kind == K; }
+  bool isNot(token::TokenKind K) const { return Kind != K; }
 
   template<typename PtrDataTy>
   void setData(PtrDataTy Ptr) { 

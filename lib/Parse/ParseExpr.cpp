@@ -5,7 +5,11 @@ namespace ezhno {
 bool ParsePrimitiveExpression(Expr*& Result) {
 }
 
-bool ParseAdditiveExpression(Expr*& Result) {
+bool Parser::ParseAdditiveExpression(Expr*& Result) {
+  Expr* E;
+  ParsePrimitiveExpression(E);
+  while (Tok.is(token::pt_plus) || Tok.is(token::pt_minus)) {
+  }
 }
 
 bool ParseAssignmentExpression(Expr*& Result) {
