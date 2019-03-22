@@ -1,0 +1,9 @@
+int32 Int32Add2(int32 a, int32 b) {
+  return a + b;
+}
+int32 Int32Minus2(int32 a, int32 b) {
+  return a - b;
+}
+int32 Int32Add3(int32 a, int32 b, int32 c) {
+  return a + b + c;
+}
